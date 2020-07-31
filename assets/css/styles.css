@@ -117,24 +117,21 @@ iframe {
 /* ======= Header ======= */
 .header {
   background: #ffffff;
-  border-top: 10px solid #778492;
+  /*border-top: 10px solid #778492;*/
 }
 .header .btn {
   font-weight: bold;
-  position: absolute;
-  margin-left: 65%;
-  margin-bottom: 5px;
-  margin-top: 4%;
+  position: relative;
 }
 .header .profile-image {
-  margin-right: 5%;
-  position: absolute;
+  margin-right: 2rem;
+  position: relative;
 }
 .header .profile-content .name {
   color: #ffffff;
   font-size: 38px;
-  position: absolute;
-  margin-left: 15%;
+  position: relative;
+  margin-left: 14%;
   margin-bottom: 5px;
   margin-top: 2%;
 }
@@ -144,8 +141,6 @@ iframe {
   font-family: "Lato", arial, sans-serif;
   font-weight: 400;
   font-size: 24px;
-  margin-left: 15%;
-  margin-top: 5%;
   margin-bottom: 15px;
 }
 .header .profile-content .social a {
@@ -163,10 +158,8 @@ iframe {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #fff;
-  margin-left: 600%;
-  margin-top: 300%;
-  margin-bottom: 15px;
   text-align: center;
+  margin-bottom: 15px
 }
 .header .profile-content .social a:hover {
   background: #000000;
@@ -569,4 +562,158 @@ iframe {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
+}
+
+/* ---- override start ---- */
+.calendar{
+  overflow-x: auto;
+}
+.d-flex{
+  display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.self-align-center{
+    align-self: center;
+}
+.self-align-end{
+    align-self: flex-end;
+}
+.custom-x-scroll::-webkit-scrollbar {
+    height: 2px;
+}
+.custom-x-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.custom-x-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.custom-x-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.custom-x-scroll{
+    overflow-x: auto;
+}
+.profile-container .contact-me{
+    flex: 1;
+    margin-right: 9%;
+}
+.justify-content-center{
+    justify-content: center;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .profile-container{
+        flex-direction: column;
+    }
+    .header .profile-container .profile-content .name{
+        margin-left: initial;
+        position: relative;
+    }
+    .header .profile-content .social a{
+        margin-left: initial;
+        margin-top: initial;
+    }
+    .header .btn {
+        margin: 0;
+        position: relative;
+    }
+    #particles-js {
+        height: 63%;
+    }
+    .profile-container .contact-me{
+        margin-right: initial;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+
+    .profile-container{position: relative;}
+    .header .profile-container .profile-content .name{
+        margin-left: initial;
+        position: relative;
+    }
+    .header .profile-content .desc{
+        margin-left: initial;
+        margin-top: initial;
+        position: relative;
+    }
+    .header .btn{
+        /*margin: 0 0 2rem;*/
+    }
+    #particles-js{
+        height: calc(100% - 444px);
+    }
+}
+
+/* iphone (portrait) ----------- */
+@media only screen
+and (max-width : 375px) {
+    /* Styles */
+    #particles-js {
+        height: 75%;
+    }
+    .profile-container .contact-me{
+        margin-right: initial;
+    }
+}
+/* iphone plus (portrait) ----------- */
+@media only screen
+and (max-width : 414px) {
+    /* Styles */
+    #particles-js {
+        height: 75%;
+    }
+    .profile-container .contact-me{
+        margin-right: initial;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+    /* Styles */
+    .header .profile-content .desc{
+        margin-left: initial;
+        margin-top: 0rem;
+        position: relative;
+    }
+    #particles-js {
+        height: 85%;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    /* Styles */
+    #particles-js {
+        height: 33%;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }
